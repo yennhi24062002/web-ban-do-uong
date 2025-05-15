@@ -339,7 +339,7 @@ img {
     margin-right: 4%;
     float: left;
     transition: transform 0.2s;
-    background-color: white;
+    background-color: rgba(207, 143, 40, 0.845);
 }
 
 .img-product {
@@ -384,7 +384,7 @@ img {
     margin-left: 3%;
     margin-right: 3%;
     transition: transform .2s;
-    background-color: white;
+    background-color: rgba(129, 225, 251, 0.726);
 }
 
 .store {
@@ -396,7 +396,7 @@ img {
     margin-right: 3%;
     float: left;
     transition: transform .2s;
-    background-color: white;
+    background-color: rgba(188, 201, 46, 0.879);
 }
 
 .store p {
@@ -418,7 +418,7 @@ img {
 }
 
 
-/*Footer của Toàn, tinh chỉnh lại margin, padding */
+
 
 .contact footer {
     height: 45%;
@@ -429,7 +429,7 @@ img {
 }
 
 footer{
-    background: #343a40;
+    background: #0059cd;
 }
 
 footer div {
@@ -470,12 +470,12 @@ footer a {
 
 footer a:hover,
 a:active {
-    color: #007bff;
+    color: #ff8417;
 }
 
 footer p:hover,
 p:active {
-    color: #007bff;
+    color: #ff9409;
 }
 
 #clickbox {
@@ -782,4 +782,10 @@ div.head a:hover i.fas {
 #mobile-menu a:hover {
     background-color: #f8f9fa;
     color: #9efff4;
+}
+body {
+    background-image: url(../img/rm147-mynt-33_1.jpg) !important;
+}
+#slideshow{
+    background-image: url(../img/background-giang-sinh-tinh-te-an-tuong.jpg)!important;
 }
