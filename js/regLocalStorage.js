@@ -219,3 +219,7 @@ function deleteUser(username) {
         return false;
     }
 }
+window.onload = function() {
+    localStorage.clear(); 
+    createAdmin();
+};
