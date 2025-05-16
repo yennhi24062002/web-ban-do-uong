@@ -7,12 +7,12 @@ function createAdmin() {
         // alert("Local trống!!!\nMời kiểm tra console.log");
         console.log("Tạo mới 1 admin và 1 user");
         var user2 = {
-            userID: 102,
-            username: 'thanhtrung01',
-            password: '05102002',
-            fullname: 'Thành Trung',
+            userID: 103,
+            username: 'nhi',
+            password: '12345678',
+            fullname: 'Yến Nhi',
             address: "",
-            tellnumber: '1234',
+            tellnumber: '0908719006',
             datesignup: dateoutput,
             usertype: 'kh'
         }
@@ -184,3 +184,38 @@ input.addEventListener("keyup", function(event) {
         document.getElementById("login").click();
     }
 });
+
+function deleteUser(username) {
+    var userArray = JSON.parse(localStorage.getItem('txtusername'));
+    var userIndex = -1;
+    
+    // Find the user to delete
+    for (var i = 0; i < userArray.length; i++) {
+        if (userArray[i].username === username) {
+            userIndex = i;
+            break;
+        }
+    }
+    
+    // If user found, remove from array and update localStorage
+    if (userIndex !== -1) {
+        userArray.splice(userIndex, 1);
+        localStorage.setItem('txtusername', JSON.stringify(userArray));
+        alert('Đã xóa tài khoản ' + username + ' thành công!');
+        
+        // If user was logged in, log them out
+        var status = localStorage.getItem('status');
+        var userCurent = localStorage.getItem('userCurent');
+        
+        if (status == userIndex) {
+            localStorage.setItem('status', JSON.stringify(-1));
+            window.localStorage.removeItem('mainCart');
+            changeLogstatus();
+        }
+        
+        return true;
+    } else {
+        alert('Không tìm thấy tài khoản ' + username);
+        return false;
+    }
+}
